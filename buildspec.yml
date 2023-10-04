@@ -1,0 +1,8 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - python -m pip install -r build_requirements.txt
+      - python -m pip install spin
+      - git submodule update --init
+      - spin build -- -Dallow-noblas=true
