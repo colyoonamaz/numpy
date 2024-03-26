@@ -6,3 +6,4 @@ phases:
       - python -m pip install spin
       - git submodule update --init
       - python -m spin build -- -Dallow-noblas=true
+      - python -c "import numpy, sys; sys.exit(numpy.test() is False)"
